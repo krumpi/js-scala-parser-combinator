@@ -1,6 +1,6 @@
-name := "lms-sandbox"
+name := "js-scala-parser-combinator"
 
-organization := "EPFL"
+organization := "com.ketalo"
 
 version := "0.1"
 
@@ -30,6 +30,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
     "org.scalatest" % "scalatest_2.10.0-virtualized-SNAPSHOT" % "1.6.1-SNAPSHOT" % "test",
+    "EPFL" % "lms-sandbox_2.10.0-virtualized-SNAPSHOT" % "0.1",
     "scala" % "virtualization-lms-core_2.10.0-virtualized-SNAPSHOT" % "0.1")
     
 //--- End of Dependencies
