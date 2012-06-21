@@ -26,7 +26,8 @@ trait SampleProg { this: JS =>
     var f:Rep[Int] = 1
     for (i <- range(0, x))
       f = f * i
-    f
+    // if I return f the javascript ends up incorrect
+    x
   }
 
   /**
@@ -55,7 +56,9 @@ object Main extends App {
     codegen.emitSource(abs _, "tabs", output)
     codegen.emitSource(factorial _, "factorial", output)
   }
-  output.write("print('calculated factorial(12): ' + factorial(12) + ' should be 120');")
+  output.println("print('calculated abs(15) gives: ' + abs(15) + ' and it should be 15');")
+  output.println("print('calculated tabs(-15) gives: ' + tabs(-15) + ' and it should be 15');")
+  output.println("print('calculated factorial(5) gives: ' + factorial(5) + ' and it should be 120');")
 
   output.close()
 }
